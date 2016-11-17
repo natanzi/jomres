@@ -52,8 +52,8 @@ class j16000list_tax_rules
             $rate_id = $rule->tax_rate_id;
 
             foreach ($jomres_countries->countries as $c) {
-                if ($c['id'] == $rule->country_id) {
-                    $r[ 'COUNTRY' ] = $c['countryname'];
+                if ($c->id == $rule->country_id) {
+                    $r[ 'COUNTRY' ] = $c->countryname;
                     break;
                 }
             }

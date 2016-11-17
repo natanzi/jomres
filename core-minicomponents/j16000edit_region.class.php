@@ -34,8 +34,8 @@ class j16000edit_region
         if ($id > 0) {
             $region = $jomres_regions->get_region_by_id($id);
             $output[ 'ID' ] = $id;
-            $output[ 'COUNTRYDROPDOWN' ] = createCountriesDropdown($region[ 'countrycode' ], 'countrycode', false);
-            $output[ 'REGIONNAME' ] = $region[ 'regionname' ];
+            $output[ 'COUNTRYDROPDOWN' ] = createCountriesDropdown($region->countrycode, 'countrycode', false);
+            $output[ 'REGIONNAME' ] = $region->regionname;
         } else {
             $region = array();
             $output[ 'ID' ] = 0;

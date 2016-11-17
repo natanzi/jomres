@@ -38,9 +38,9 @@ class j16000edit_country
         $output[ '_JOMRES_EDIT_COUNTRY_COUNTRYCODE' ] = jr_gettext('_JOMRES_EDIT_COUNTRY_COUNTRYCODE', '_JOMRES_EDIT_COUNTRY_COUNTRYCODE', false);
         $output[ '_JOMRES_EDIT_COUNTRY_COUNTRYNAME' ] = jr_gettext('_JOMRES_EDIT_COUNTRY_COUNTRYNAME', '_JOMRES_EDIT_COUNTRY_COUNTRYNAME', false);
 
-        $output[ 'ID' ] = $country[ 'id' ];
-        $output[ 'COUNTRYCODE' ] = $country[ 'countrycode' ];
-        $output[ 'COUNTRYNAME' ] = $country[ 'countryname' ];
+        $output[ 'ID' ] = $country->id;
+        $output[ 'COUNTRYCODE' ] = $country->countrycode;
+        $output[ 'COUNTRYNAME' ] = $country->countryname;
 
         $jrtbar = jomres_singleton_abstract::getInstance('jomres_toolbar');
         $jrtb = $jrtbar->startTable();

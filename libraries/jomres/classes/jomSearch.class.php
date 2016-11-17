@@ -1030,7 +1030,7 @@ function prepGeographicSearch()
             $r[ 'postcode' ] = $location->property_postcode;
             if (is_numeric($location->property_region)) {
                 $jomres_regions = jomres_singleton_abstract::getInstance('jomres_regions');
-                $r[ 'region' ] = jr_gettext('_JOMRES_CUSTOMTEXT_REGIONS_'.$location->property_region, $jomres_regions->regions[ $location->property_region ][ 'regionname' ], false, false);
+                $r[ 'region' ] = $jomres_regions->regions->{$location->property_region}->regionname;
             } else {
                 $r[ 'region' ] = $location->property_region;
             }

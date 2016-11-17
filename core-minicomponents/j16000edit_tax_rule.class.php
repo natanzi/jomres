@@ -41,8 +41,8 @@ class j16000edit_tax_rule
             $tax_rule = doSelectSql($query, 2);
             $output[ 'ID' ] = $id;
             foreach ($jomres_countries->countries as $c) {
-                if ($c['id'] == $tax_rule[ 'country_id' ]) {
-                    $output[ 'COUNTRY' ] = createSimpleCountriesDropdown($c[ 'countrycode' ]);
+                if ($c->id == $tax_rule[ 'country_id' ]) {
+                    $output[ 'COUNTRY' ] = createSimpleCountriesDropdown($c->countrycode);
                     break;
                 }
             }

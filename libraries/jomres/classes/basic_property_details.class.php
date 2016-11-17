@@ -421,7 +421,7 @@ class basic_property_details
                 $this->multi_query_result[ $data->propertys_uid ][ 'property_postcode' ] = $data->property_postcode;
                 if (is_numeric($data->property_region)) {
                     $jomres_regions = jomres_singleton_abstract::getInstance('jomres_regions');
-                    $this->multi_query_result[ $data->propertys_uid ][ 'property_region' ] = jr_gettext('_JOMRES_CUSTOMTEXT_REGIONS_'.$data->property_region, $jomres_regions->regions[ $data->property_region ][ 'regionname' ], $editable, false);
+                    $this->multi_query_result[ $data->propertys_uid ][ 'property_region' ] = $jomres_regions->regions->{$data->property_region}->regionname;
                     $this->multi_query_result[ $data->propertys_uid ][ 'property_region_id' ] = $data->property_region;
                 } else {
                     $this->multi_query_result[ $data->propertys_uid ][ 'property_region' ] = jr_gettext('_JOMRES_CUSTOMTEXT_PROPERTY_REGION', $data->property_region, $editable, false);
